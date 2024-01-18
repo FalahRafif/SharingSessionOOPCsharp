@@ -25,6 +25,12 @@ namespace TestOOP
             OOP(a , t, b);
         }
 
+        /// <summary>
+        /// Procedural Programming, Tidak adanya 4 pilar dari OOP dan kode langsung di buat begitu sahja
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="t"></param>
+        /// <param name="b"></param>
         private static void ProceduralProgramming(double a, double t, double b)
         {
             double hasilLuasSegitiga = (1.0/2.0)*a*t;
@@ -38,21 +44,33 @@ namespace TestOOP
 
         }
 
+        /// <summary>
+        /// OOP, terdapat 4 pilar/prinsip yang di pakai
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="t"></param>
+        /// <param name="b"></param>
         private static void OOP(double a, double t, double b)
         {
-            Segitiga segitiga = new Segitiga
+            //encasulation
+            Segitiga segitiga = new Segitiga //instance dari class segitiga menjadi object segitiga
             {
+                //abstaction
                 Alas = a,
                 Tinggi = t
             };
-            Trapesium trapesium = new Trapesium
+            //encasulation
+            Trapesium trapesium = new Trapesium //instance dari class trapesium menjadi object trapesium
             {
+                //abstaction
                 Alas = a,
                 Tinggi = t,
                 SisiPanjang = b
             };
 
             Console.WriteLine("/////////// OOP");
+
+            //overiding
             segitiga.HitungLuas();
             trapesium.HitungLuas();
             Console.WriteLine("/////////// OOP");
